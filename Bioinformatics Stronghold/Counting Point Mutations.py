@@ -7,7 +7,14 @@ with open('rosalind_hamm.txt','r') as t:
             count +=1
     print(count)
 
-
+#solution by Ben Usman
+with open('rosalind_hamm.txt','r') as t:
+    t = (t.read().split('\n'))
+    a,b=t[0],t[1]
+    print(sum([x!=y for x,y in zip(a,b)]))
+    #zip makes list or tuple by grouping 2 iterable.
+    #note= [] or {} on line using zip.
+    #ex> {x:y for x,y in zip(a,b)} = dictionary. a,b could be list, range...
 
 
 
