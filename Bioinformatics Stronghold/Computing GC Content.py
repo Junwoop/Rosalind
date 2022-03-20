@@ -21,7 +21,7 @@ with open('rosalind_gc.txt','r') as t:
 
 #below is code written by LudditeCyborg
 with open('rosalind_gc.txt', 'r') as file:
-    re = ''.join(file.read().split('\n')).split('>')
+    re = ''.join(file.read().split('\n')).split('>') #\n goes away when splitted by it
     re.remove('')
     d = {}
     for i in re:
