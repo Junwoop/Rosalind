@@ -1,0 +1,12 @@
+import regex
+with open('input.txt','r') as t:
+    t=t.read().strip().splitlines()
+    string,k,d=t[0],int(t[1].split()[0]),int(t[1].split()[1])
+    kmers=[]
+    for i in range(len(string)-k):
+        motif=string[i:i+k]
+        pattern=regex.compile('(?=(%s){e<=2})'%motif)
+        for j in pattern.findall(string):
+            if len(j)==len(motif):
+                kmers.append(j)
+    print(kmers.count(kmers[2]))
